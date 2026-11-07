@@ -4,7 +4,7 @@
 
 1. **GitHub Pages / Vite path**
    - `vite.config.ts` တွင် `VITE_BASE_PATH` ကို ထည့်သွင်းအသုံးပြုနိုင်အောင် ပြင်ဆင်ထားသည်။
-   - `index.html` ရှိ script, favicon, apple-touch icon နှင့် manifest path များကို `%BASE_URL%` ဖြင့် ချိတ်ထားသည်။
+   - `index.html` ရှိ favicon, apple-touch icon နှင့် manifest path များကို `%BASE_URL%` ဖြင့် ချိတ်ထားပြီး Vite entry script ကို `/src/main.tsx` အဖြစ်ထားသည်။ `%BASE_URL%src/main.tsx` သုံးခြင်းကြောင့် Rollup က `/Dog-Training/src/main.tsx` ကို source entry အဖြစ် resolve မလုပ်နိုင်သော Build Error ကို ပြင်ဆင်ထားသည်။
    - Manifest ၏ `id`, `start_url`, `scope` နှင့် icon path များကို relative path သုံးထားသည်။
    - Service Worker ကို production တွင်သာ register လုပ်ပြီး GitHub project subpath အောက်တွင်ပါ scope မှန်ကန်စွာ register ဖြစ်အောင် ပြင်ထားသည်။
 
@@ -46,7 +46,7 @@
 - Manifest icon file existence and dimensions — **PASS**
 - Local source import path existence — **PASS**
 - Inline Base64 image removal — **PASS**
-- Full `npm run build` — **NOT RUN**: `node_modules` မရှိသေးပြီး npm registry ကို ချိတ်ဆက်၍ dependencies install လုပ်မရခဲ့ပါ။ Syntax check သည် full TypeScript type-check သို့မဟုတ် Vite production build အစားထိုးမဟုတ်ပါ။
+- Full `npm run build` — ယခင် static audit အချိန်တွင် မလုပ်နိုင်ခဲ့ပါ။ ယခု ZIP ထဲတွင် entry-path fix ထည့်ထားပြီး၊ user repository တွင် GitHub Actions က run ပြီးမှ deployment အောင်မြင်မှုကို အတည်ပြုနိုင်မည်ဖြစ်သည်။
 
 ## မပြီးသေးသော Product / Production လိုအပ်ချက်များ
 

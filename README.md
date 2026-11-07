@@ -93,7 +93,7 @@ pawmaster-vite-ts/
 
 ## 8. Troubleshooting
 
-- **GitHub မှာ အဖြူမျက်နှာပြင်** — Actions workflow build အောင်မြင်/မအောင်မြင်ကို စစ်ပါ။ Pages Source ကို GitHub Actions ရွေးထားကြောင်း စစ်ပါ။
+- **GitHub မှာ အဖြူမျက်နှာပြင်** — Actions workflow build အောင်မြင်/မအောင်မြင်ကို စစ်ပါ။ Pages Source ကို GitHub Actions ရွေးထားကြောင်း စစ်ပါ။ `index.html` ထဲက Vite entry ကို `<script type="module" src="/src/main.tsx"></script>` အဖြစ်ထားရမည်။ `%BASE_URL%` ကို entry script ရှေ့တွင် မထည့်ပါနှင့်။
 - **App အဟောင်းပဲ ပေါ်နေခြင်း** — Browser cache/Service Worker ဟောင်းကို ဖယ်ရှားပြီး page ကို reload လုပ်ပါ။
 - **Install မပေါ်ခြင်း** — HTTPS ဖြင့် production URL ကိုဖွင့်ပါ၊ online အခြေအနေတွင် အရင်ဖွင့်ပါ၊ browser ၏ Install/Add to Home Screen menu ကို အသုံးပြုပါ။
 - **Data မတွေ့ခြင်း** — မူလအသုံးပြုခဲ့သော Browser နှင့် Device တူညီကြောင်း စစ်ပါ။ Local Storage Data သည် browser တစ်ခုမှ တစ်ခုသို့ အလိုအလျောက် မကူးပါ။
