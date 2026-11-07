@@ -1,0 +1,26 @@
+{
+  "id": "./",
+  "name": "PawMaster Pro - ခွေးလေးများ လေ့ကျင့်သင်ကြားရေး App",
+  "short_name": "PawMaster",
+  "description": "ခွေးလေးများကို အခြေခံမှ အဆင့်မြင့်အထိ သင်ကြားပေးနိုင်သော Clicker နှင့် လေ့ကျင့်ရေး PWA",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FFFBF5",
+  "theme_color": "#F59E0B",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./paw-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./paw-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
